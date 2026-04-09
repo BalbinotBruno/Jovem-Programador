@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    
+
+    <input id="num1" type="number" placeholder="Numero 1">
+    <input id="num2" type="number" placeholder="Numero 2">
+    <button id="adicao" onclick="calcular('adicao')">Adicao</button>
+    <button id="subtracao" onclick="calcular('subtracao')">Subtracao</button>
+    <button id="multiplicacao" onclick="calcular('multiplicacao')">Multiplicacao</button>
+    <button id="divisao" onclick="calcular('divisao')">Divisao</button>
+     
+
+    <div id="resultado"> O resultado é: </div>
+    <script>
+        function calcular(tipo){
+
+        let n1 = Number(document.getElementById("num1").value)
+        let n2 = Number(document.getElementById("num2").value)
+        let resultado;
+
+        if(tipo === "adicao"){
+            resultado = n1 + n2;
+        }
+
+        if(tipo === "subtracao"){
+            resultado = n1 - n2;
+        }
+
+        if(tipo === "multiplicacao"){
+            resultado = n1 * n2;
+        }
+
+        if(tipo === "divisao"){
+            resultado = n1 / n2;
+        }
+        document.getElementById('resultado').innerText = resultado;
+
+}
+        
+    </script>
+</body>
+
+</html>
