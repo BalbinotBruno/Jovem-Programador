@@ -1,0 +1,61 @@
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista nao Ordenada</title>
+
+    <style>
+        button {
+            margin-left: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" name="Lista" id="texto" placeholder="Digite oque você quer adicionar a lista">
+        <button type="button" name="Adicionar" onclick="adicionar()">Adicionar</button>
+
+
+    </div>
+
+    <ul id="lista"> </ul>
+
+    <script>
+        function adicionar(){
+        
+            let input = document.getElementById("texto");
+            let texto = input.value;
+        
+            if(texto === ""){
+                alert("Digite alguma coisa");
+                return;
+            }
+            
+            let li = document.createElement('li')
+
+            li.innerText = texto;
+
+            let btn = document.createElement('button');
+            btn.innerText = "EXCLUIR"
+
+            btn.onclick = function(){
+                li.remove();
+            };
+
+            li.appendChild(btn);
+
+
+
+            document.getElementById("lista").appendChild(li);
+
+           input.value = "";
+
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
