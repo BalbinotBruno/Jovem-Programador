@@ -1,0 +1,30 @@
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacao de Login</title>
+</head>
+
+<body>
+    <header>
+        <form onsubmit="fazerLogin(event)">
+
+            <label>E-mail</label> <br>
+            <input id="email" type="email"> <br>
+
+            <label>Senha</label> <br>
+                <input id="senha" type="password" minlength="8"><br><br>
+
+                <button type="submit">Confirmar</button>
+
+                <p id="mensagem"></p>
+
+                
+        </form>
+
+        <script src="script.js"></script>
+    </header>
+</body>
+
+</html>
